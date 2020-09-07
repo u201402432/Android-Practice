@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_androidconnectingtophpmysql" default="compile.module.androidconnectingtophpmysql">
+  <dirname property="module.androidconnectingtophpmysql.basedir" file="${ant.file.module_androidconnectingtophpmysql}"/>
+  
+  <property name="module.jdk.home.androidconnectingtophpmysql" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.androidconnectingtophpmysql" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.androidconnectingtophpmysql" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.androidconnectingtophpmysql" value="-encoding x-windows-949 -source 8 ${compiler.args}"/>
+  
+  <property name="androidconnectingtophpmysql.output.dir" value="undefined"/>
+  <property name="androidconnectingtophpmysql.testoutput.dir" value="undefined"/>
+  
+  <path id="androidconnectingtophpmysql.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="androidconnectingtophpmysql.module.production.classpath">
+    <path refid="${module.jdk.classpath.androidconnectingtophpmysql}"/>
+  </path>
+  
+  <path id="androidconnectingtophpmysql.runtime.production.module.classpath"/>
+  
+  <path id="androidconnectingtophpmysql.module.classpath">
+    <path refid="${module.jdk.classpath.androidconnectingtophpmysql}"/>
+  </path>
+  
+  <path id="androidconnectingtophpmysql.runtime.module.classpath"/>
+  
+  
+  <patternset id="excluded.from.module.androidconnectingtophpmysql">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.androidconnectingtophpmysql">
+    <patternset refid="excluded.from.module.androidconnectingtophpmysql"/>
+  </patternset>
+  
+  
+  <target name="compile.module.androidconnectingtophpmysql" depends="compile.module.androidconnectingtophpmysql.production,compile.module.androidconnectingtophpmysql.tests" description="Compile module AndroidConnectingToPhpMySQL"/>
+  
+  <target name="compile.module.androidconnectingtophpmysql.production" depends="register.custom.compilers" description="Compile module AndroidConnectingToPhpMySQL; production classes"/>
+  
+  <target name="compile.module.androidconnectingtophpmysql.tests" depends="register.custom.compilers,compile.module.androidconnectingtophpmysql.production" description="compile module AndroidConnectingToPhpMySQL; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.androidconnectingtophpmysql" description="cleanup module">
+    <delete dir="${androidconnectingtophpmysql.output.dir}"/>
+    <delete dir="${androidconnectingtophpmysql.testoutput.dir}"/>
+  </target>
+</project>

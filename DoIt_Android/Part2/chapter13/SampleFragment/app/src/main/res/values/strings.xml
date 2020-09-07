@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SampleFragment</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="image_titles">
+        <item>첫번째 이미지</item>
+        <item>두번째 이미지</item>
+        <item>세번째 이미지</item>
+    </string-array>
+
+</resources>
